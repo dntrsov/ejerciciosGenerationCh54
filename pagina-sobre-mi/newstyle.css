@@ -1,0 +1,54 @@
+/* Variables de paleta bosque */
+:root {
+  --bg-light:   #F0F4EC;
+  --forest-dark: #2E3A2E;
+  --forest-med: #3F5D3F;
+  --earth-brown: #8B5A2B;
+  --text-light: #FFFFFF;
+  --text-dark:  #2B2B2B;
+}
+
+
+
+/* Fondo general del body */
+body {
+  background-color: var(--bg-light);
+  padding: 6px;
+  color: var(--text-dark);
+  font-family: sans-serif;
+}
+
+/* Encabezados */
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  color: var(--forest-dark);
+}
+
+/* Párrafos destacados */
+.parrafo-estilo {
+  background-color: var(--forest-med);
+  color: var(--text-light);
+  text-align: justify;
+  padding: 5px;
+
+}
+
+/* Imagen con id Nanami */
+#Nanami {
+  display: block;
+  width: 450px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Bloque de conflictos */
+#conflictos {
+  background-color: var(--earth-brown);
+  color: var(--text-light);
+  text-align: center;
+  padding: 10px;
+}
