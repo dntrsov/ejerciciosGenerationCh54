@@ -1,0 +1,43 @@
+/* Fuente general */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f9f9;
+    color: #333;
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Títulos */
+h1, h2 {
+    text-align: center;
+    color: #226666;
+}
+
+/* Botones */
+button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: lightgreen;
+}
+
+
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title> Arreglos y ciclos Javascript</title>
+</head>
+
+<body>
+    <h1>Ejercicios Javascript - Arreglos y ciclos</h1>
+
+   <h2>Ejercicio 1</h2>
+   <p>
+    Exercise #1 (sugerencia: join()) <br>
+Copy the code below into your workspace:<br>
+let arr = ["This", "is", "a", "sentence."];<br>
+function printOutString() {<br>
+  // your code <br>
+} <br>
+printOutString();<br>
+Complete the function to print out the string: This is a sentence.
+   </p>
+
+   <p>
+   <p>Respuesta:<br>
+    function ejecutarEjercicio1() {<br>
+    let array = ["This", "is", "a", "sentence."];<br>
+
+    const unirFrase = (array) => {<br>
+        let frase = "";<br>
+        for (let palabra of array) {<br>
+            frase += palabra + " ";<br>
+        }<br>
+        return frase.trim();<br>
+    };<br>
+    </p>
+
+    return unirFrase(array); <br>
+}
+   </p>
+<button id="btn-ej1">Ejecutar</button>
+<p id="resultado-ej1"></p>
+
+
+<h2>Ejercicio 2</h2>
+<p>
+    Exercise #2 (sugerencia map()) <br>
+Write a function that: <br>
+*Takes in an array of numbers. <br>
+*Doubles the value of each number in the array.<br>
+*Prints out the new updated array.<br>
+Example: Given an array [1, 2, 4, 5]. The output should be [2, 4, 8, 10]
+
+</p>
+
+<p> Respuesta <br>
+    function ejecutarEjercicio2() { <br>
+    const duplicarConMap = (ejemploArray) => ejemploArray.map(num => num * 2); <br>
+    const numerosOriginales = [10, 20, 30, 40, 50]; <br>
+    const numerosDuplicados = duplicarConMap(numerosOriginales);<br>
+
+    return `Arreglo con elementos duplicados:${numerosDuplicados.join(', ')}`;<br>
+}
+</p>
+
+
+<button id="btn-ej2">Ejecutar</button>
+<p id="resultado-ej2"></p>
+
+
+<h2>Ejercicio 3</h2>
+<p>
+    Exercise #3 (sugerencia reduce()) <br>
+Write a program to compute the sum and product (multiplication) of an array of numbers <br> Print out the sum and the product.<br>
+Example: Given an array [1, 2, 3, 4] The sum is 10. The product is 24.
+
+</p>
+
+<p>
+    Respuesta: <br>
+    function ejecutarEjercicio3() {<br>
+    const calcularSumaProductoReduce = (ejemploArray) => {<br>
+
+        if (ejemploArray.length === 0) {<br>
+            return { suma: 0, producto: 1 }; <br>
+        }<br>
+        const suma = ejemploArray.reduce((acc, num) => acc + num, 0);<br>
+        const producto = ejemploArray.reduce((acc, num) => acc * num, 1);<br>
+        return { suma, producto };<br>
+    };
+
+    const numeros = [10, 20, 30, 40]; <br>
+    const resultado = calcularSumaProductoReduce(numeros);<br>
+
+    return `Arreglo: ${numeros.join(', ')}
+            Suma : ${resultado.suma}
+            Producto: ${resultado.producto}.`;
+}
+
+</p>
+<button id="btn-ej3">Ejecutar</button>
+<p id="resultado-ej3"></p>
+
+
+<h2>Ejercicio 4</h2>
+
+<p>
+    Exercise #4 (sugerencia filter() e includes())<br>
+let student1Courses = ['Math', 'English', 'Programming'];<br>
+let student2Courses = ['Geography', 'Spanish', 'Programming'];<br>
+Create a program that loops over the 2 arrays; if there are any common courses print them out to the console.
+
+</p>
+
+<p>
+    Respuesta: <br>
+    function ejecutarEjercicio4() {<br>
+    const student1Courses = ['Math', 'English', 'Programming', 'History'];<br>
+    const student2Courses = ['Geography', 'Spanish', 'Programming', 'Art'];<br>
+
+    const commonCourses = student1Courses.filter(course => student2Courses.includes(course));<br>
+
+    let resultadoString = `Cursos Estudiante 1: ${student1Courses.join(', ')}<br>
+Cursos Estudiante 2: ${student2Courses.join(', ')}`;<br>
+
+    if (commonCourses.length > 0) {<br>
+        resultadoString += `Cursos en común: ${commonCourses.join(', ')}`;<br>
+    } else {
+        resultadoString += `No se encontraron cursos en común.`;<br>
+    }
+
+    return resultadoString;<br>
+}
+</p>
+<button id="btn-ej4">Ejecutar</button>
+<p id="resultado-ej4"></p>
+
+<h2>Ejercicio 5</h2>
+
+<p>
+    For each of the exercises below, assume you are starting with the following people array. <br>
+let people = ["Maria", "Dani", "Luis", "Juan", "Camila"]; <br>
+Write a command that prints out all of the people in the list.<br>
+Write the command to remove "Dani" from the array. <br>
+Write the command to remove "Juan" from the array. <br>
+Write the command to move "Luis" to the front of the array.<br>
+Write the command to add your name to the end of the array.<br>
+Using a loop, iterate through this array and after console.log "Maria", exit from the loop.<br>
+Write the command that gives the indexOf where "Maria" is located.<br>
+At the end of the exercise, there should be 4 people in the array.
+
+</p>
+
+
+<button id="btn-ej5">Ejecutar</button>
+<p id="resultado-ej5"></p>
+
+<h2>Ejercicio 6</h2>
+
+<p>
+    Write a function that performs the bubble algorithm. <br>
+Input [3, 6, 12, 5, 100, 1]<br>
+Output [1, 3, 5, 6, 12, 100]
+
+<p>
+    Respuesta: <br>
+    const bubbleSort = (arr) => { <br>
+  let swapped;<br>
+
+  do { <br>
+    swapped = false; <br>
+    for (let i = 0; i < arr.length - 1; i++) { <br>
+      if (arr[i] > arr[i + 1]) { <br>
+        let temp = arr[i]; <br>
+        arr[i] = arr[i + 1]; <br>
+        arr[i + 1] = temp; <br>
+        swapped = true; <br>
+      }<br>
+    }<br>
+  } while (swapped); <br>
+
+  return arr;<br>
+};
+
+let myArray = [3, 6, 12, 5, 100, 1];<br>
+console.log(bubbleSort(myArray));
+</p>
+
+</p>
+<button id="btn-ej6">Ejecutar</button>
+<p id="resultado-ej6"></p>
+
+
+
+
+
+
+
+    <script type="module" src="./archivos js/main.js"></script>
+</body>
+
+</html>
